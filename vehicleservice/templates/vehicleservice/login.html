@@ -1,0 +1,52 @@
+<!-- {% extends 'vehicleservice/base.html' %} -->
+{% block body%}
+       <div class="container" >
+       		<div class="row my-3" >
+       		<div class="col-sm-6 border border-primary text-center "  style=" border-radius: 10px;">
+       				<!-- <h1 style="color: red;" class="text-center">Create your account</h1>
+       				<form action="" method="post" class="border border-light p-4 rounded " >
+
+						{% csrf_token %}
+       					{% for fm in form %}
+       						{{fm.label_tag}}
+       						{{fm}}
+       						<small >{{fm.errors |striptags}}</small>
+       					{% endfor%}
+						<input type="submit" value="Submit" class="btn btn-primary mt-3 btn-block">
+       				</form> -->
+       				
+
+	       				<form class="justify-content-center">
+	       					<!-- {% csrf_token %} -->
+	       					<div class="text-center">
+	       					<h1 class="text-dark">Login here</h1>
+	       						<!-- {% for fm in form %} -->
+	       						
+	       						<div class="form-row py-3 pt-1">	
+	       								<div class="  col-lg-10">
+	       										<input type="text" class="input px-3" placeholder="email" name="">	
+	       								</div>
+	       						</div>	
+	       						
+	       						<div class="form-row py-3 pt-1 ">	
+	       								<div class="  col-lg-10">
+	       										<input type="password" class="input px-3" placeholder="password" name="">	
+	       								</div>
+	       						</div>
+	       						
+
+
+	       						<div class="form-row py-3 pt-1 ">	
+	       								<div class="  col-lg-10">
+	       										<button class="btn1">Login</button>	
+	       								</div>
+	       						</div>	
+	       						</div>		
+	       				</form>		or Login with</p>
+	       				
+	       				<span><i class="fab fa-facebook">	</i></span>
+	       				<span><i class="fab fa-google-plus">	</i></span>
+       			</div>
+       		</div>
+       </div> 
+{% endblock body%}

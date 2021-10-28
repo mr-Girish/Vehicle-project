@@ -1,0 +1,55 @@
+<!-- {% extends 'vehicleservice/base.html' %} -->
+{% block body%}
+       <div class="container" >
+       	
+       		<div class="row my-3 justify-content-around" >
+       			<div class="col-sm-6 border border-success text-center "  style="background-color: ; border-radius: 10px;">
+					<form action="" method="post" class="p-4 rounded">
+							{% csrf_token %}
+
+	       					<h1 class="text-dark mt-5 ">Create Your Account</h1>
+
+	       						<div class="form-row py-3 pt-5 ">	
+	       								<div class="col-lg-10">
+	       		
+	       										{{form.username}}	
+	       								</div>
+	       						</div>	
+
+	       						<div class="form-row py-3 pt-1">	
+	       								<div class="  col-lg-10">
+
+	       								
+	       								{{form.email}}	</div>
+	       						</div>	
+	       						<div class="form-row py-3 pt-1 ">	
+	       								<div class="  col-lg-10">
+	       											{{form.password1}}	
+	       								</div>
+	       						</div>
+
+	       						<div class="form-row py-3 pt-1 ">	
+	       								<div class="  col-lg-10">
+	       											{{form.password2}}
+	       								</div>
+									 <small class="text-danger">{{fm.errors|striptags}}</small>
+	       						</div>
+	       						<div class="form-row py-3 pt-1 ">	
+	       								<div class="  col-lg-10">
+	       										
+	       								</div>
+	       						</div>
+								<div class="form-row py-3 pt-1 ">
+	       								<div class="  col-lg-10">
+	       										<button class="btn1">Singup</button>	
+	       								</div>
+	       						</div>	
+	       						</div>		
+	       				</form>
+	       				<p>	or Login with</p>
+	       				<span><i class="fab fa-facebook">	</i></span>
+	       				<span><i class="fab fa-google-plus">	</i></span>
+       			</div>
+       		</div>
+       </div> 
+{% endblock body%}
