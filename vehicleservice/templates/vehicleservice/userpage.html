@@ -15,7 +15,8 @@
  </head>
 <!--style="background-image: url('{% static "images/bike.jpg"%}')"&ndash;&gt;-->
   <body>
-  <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light"
+  >
 
     <a class="navbar-brand fs-2 fw-bold" href="#">Vehicle Rental System</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,23 +25,17 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="nav navbar-nav ms-auto fs-4 fw-bold navbar-right">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <a class="nav-link active" aria-current="page" href="#"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Dashboard</a>
         </li>
        
-        <li class="nav-item">
-          <a class="nav-link" href="/about">Dashboard</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/about">About</a>
-        </li>
-       <!--  <li class="nav-item">
-          <a class="nav-link" href="/singup">Singup</a>
-        </li> -->
-        <!-- Button trigger modal -->
-      <!--   {% if user.is_authenticated %}
+       
+        {% if user.is_authenticated %}
        <ul class="nav nav-tabs">
 
   <li class="nav-item dropdown">
@@ -53,9 +48,9 @@
       <li><a class="dropdown-item" href="#">Separated link</a></li>
     </ul>
   </li>
-        </ul> -->
+        </ul>
        
-        <!-- {% else %} -->
+        {% else %}
          <button type="button" class="btn btn-success mx-2" data-bs-toggle="modal" data-bs-target="#loginModal">
          Login
         </button>
@@ -63,7 +58,7 @@
           Singup
         </button>
 
-         <!-- {% endif %} -->
+         {% endif %}
 
       </ul>
     </div>
@@ -74,93 +69,146 @@
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 {% endfor %}
-    <header class="jumbotron back-img" style="background-image: url('{% static 'images/bike.jpg'%}')">
-      <div class="data" >
-        <h1 class="text-weight-bold ">Welcome to vehcile services</h1>
-        <p class="font-italic">Go and book your vehicle</p>
-        
-      </div>
-</header>
- {% block body %}
+ 
+ {% block usercontent %}
+ 			<div class="container">
+ 				<div class="row">
+ 					<div class="col-3">
+							 <div class="card" style="width: 18rem;">
+							  <img src="{% static 'images/bike.jpg'%}" class="card-img-top" alt="...">
+							  
+							  <ul class="list-group list-group-flush">
+							    <li class="list-group-item">Name: Bullet</li>
+							    <li class="list-group-item">company: Royal enfield</li>
+							    <li class="list-group-item">Price per day: $Rs 200/</li>
+							  </ul>
+							  <div class="card-body">
+							    <a href="#" class="btn btn-primary">Book</a>
+							  </div>
+							</div>
+ 					</div>
 
-    {% endblock body %}
+ 					<div class="col-3">
+							 <div class="card" style="width: 18rem;">
+							  <img src="{% static 'images/8.jpeg'%}" class="card-img-top" alt="...">
+							 
+							  <ul class="list-group list-group-flush">
+							    <li class="list-group-item">Name: Bullet</li>
+							    <li class="list-group-item">company: Royal enfield</li>
+							    <li class="list-group-item">Price per day: $Rs 200/</li>
+							  </ul>
+							  <div class="card-body">
+							     <a href="#" class="btn btn-primary">Book</a>
+							  </div>
+							</div>
+ 					</div>
 
-<div class="container text-center"> 
-    <h2> WELCOME TO VEHICLE RENTAL SYSEM </h2>
-    <div class="row mt-4"> 
-        <div class="col-sm-4"> 
-           <img src="{% static 'images/r1.jpeg'%}" class="card-img-top" alt="..." height="300px" height="200px">
-           
-            
-            
-        </div>
-        <div class="col-sm-4"> 
-          <img src="{% static 'images/r2.jpg'%}" class="card-img-top" alt="..." height="300px" height="200px">
-          
-        </div>
-        <div class="col-sm-4"> 
-          <img src="{% static 'images/r3.jpg'%}" class="card-img-top" alt="..." height="300px" height="200px">
-         
-        </div>
-    </div>      
-</div>  
-<div class="container text-center mt-5"> 
-    <h2>  Services</h2>
-    <div class="row mt-4"> 
-        <div class="col-sm-6"> 
-            <a href="#"><i class="fas fa-car fa-10x text-success"></i></a>
-            <h2>Four wheeler</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            
-        </div>
-        <div class="col-sm-6"> 
-          <a href="#"><i class="fas fa-motorcycle fa-10x"></i></a><h2>two wheeler</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-    </div>      
-</div>  
+ 					<div class="col-3">
+							 <div class="card" style="width: 18rem;">
+							  <img src="{% static 'images/2.jpeg'%}" class="card-img-top" alt="...">
+							  
+							  <ul class="list-group list-group-flush">
+							    <li class="list-group-item">Name: Bullet</li>
+							    <li class="list-group-item">company: Royal enfield</li>
+							    <li class="list-group-item">Price per day: $Rs 200/</li>
+							  </ul>
+							  <div class="card-body">
+							     <a href="#" class="btn btn-primary">Book</a>
+							  </div>
+							</div>
+ 					</div>
+
+ 					<div class="col-3">
+							 <div class="card" style="width: 18rem;">
+							  <img src="{% static 'images/3.jpeg'%}" class="card-img-top" alt="...">
+							 
+							  <ul class="list-group list-group-flush">
+							    <li class="list-group-item">Name: Bullet</li>
+							    <li class="list-group-item">company: Royal enfield</li>
+							    <li class="list-group-item">Price per day: $Rs 200/</li>
+							  </ul>
+							  <div class="card-body">
+							    <a href="#" class="btn btn-primary">Book</a>
+							  </div>
+							</div>
+ 					</div>
+
+ 					<div class="col-3">
+							 <div class="card" style="width: 18rem;">
+							  <img src="{% static 'images/4.jpeg'%}" class="card-img-top" alt="...">
+							 
+							  <ul class="list-group list-group-flush">
+							   <li class="list-group-item">Name: Bullet</li>
+							    <li class="list-group-item">company: Royal enfield</li>
+							    <li class="list-group-item">Price per day: $Rs 200/</li>
+							  </ul>
+							  <div class="card-body">
+						 <a href="#" class="btn btn-primary">Book</a>
+							  </div>
+							</div>
+ 					</div>
+
+ 					<div class="col-3">
+							 <div class="card" style="width: 18rem;">
+							  <img src="{% static 'images/5.jpeg'%}" class="card-img-top" alt="...">
+							 
+							  <ul class="list-group list-group-flush">
+							   <li class="list-group-item">Name: Bullet</li>
+							    <li class="list-group-item">company: Royal enfield</li>
+							    <li class="list-group-item">Price per day: $Rs 200/</li>
+							  </ul>
+							  <div class="card-body">
+							     <a href="#" class="btn btn-primary">Book</a>
+							  </div>
+							</div>
+ 					</div>
+ 						<div class="col-3">
+							 <div class="card" style="width: 18rem;">
+							  <img src="{% static 'images/5.jpeg'%}" class="card-img-top" alt="...">
+							 
+							  <ul class="list-group list-group-flush">
+							   <li class="list-group-item">Name: Bullet</li>
+							    <li class="list-group-item">company: Royal enfield</li>
+							    <li class="list-group-item">Price per day: $Rs 200/</li>
+							  </ul>
+							  <div class="card-body">
+							     <a href="#" class="btn btn-primary">Book</a>
+							  </div>
+							</div>
+ 					</div>
+ 						<div class="col-3">
+							 <div class="card" style="width: 18rem;">
+							  <img src="{% static 'images/5.jpeg'%}" class="card-img-top" alt="...">
+							 
+							  <ul class="list-group list-group-flush">
+							   <li class="list-group-item">Name: Bullet</li>
+							    <li class="list-group-item">company: Royal enfield</li>
+							    <li class="list-group-item">Price per day: $Rs 200/</li>
+							  </ul>
+							  <div class="card-body">
+							     <a href="#" class="btn btn-primary">Book</a>
+							  </div>
+							</div>
+ 					</div>
 
 
-<div class="container text-center mt-5"> 
-    <h2> About</h2>
-    <div class="row mt-4"> 
-       
-                <div class="col-md-4">
-                      <img src="{% static 'images/r1.jpeg'%}" class="img-fluid rounded-start" alt="...">
-               </div>
-                            <div class="col-md-8">
-                              <div class="card-body">
-                                  
-                                       <p class="card-text">
-                                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  
-                                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  
-                                       </p>
-                                         
-                               </div>
-                          </div>
-        
-    </div>      
-</div>  
+
+ 					
+ 					<div class="col-3">
+ 						
+ 					</div>
+ 					<div class="col-3">
+ 							
+ 					</div>
+ 					<div class="col-3">
+ 						
+ 					</div>
+ 				</div>
+ 				
+ 			</div>
+    {% endblock usercontent %}
+
+<!--  
 
 <footer class="container-fluid bg-dark text-white mt-5" >
   <div class="container">
@@ -180,7 +228,7 @@
       </div>
     </div>
   </div>
-</footer>
+</footer> -->
 
 
 
@@ -271,3 +319,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

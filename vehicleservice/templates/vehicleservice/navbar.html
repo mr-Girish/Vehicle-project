@@ -1,0 +1,138 @@
+
+<!doctype html>
+{% load static%}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title%}{% endblock title%}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+ </head>
+<!--style="background-image: url('{% static "images/bike.jpg"%}')"&ndash;&gt;-->
+  <body>
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+
+    <a class="navbar-brand fs-2 fw-bold" href="#">Vehicle Rental System</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="nav navbar-nav ms-auto fs-4 fw-bold navbar-right">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">vehicles</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+       <!--  <li class="nav-item">
+          <a class="nav-link" href="/singup">Singup</a>
+        </li> -->
+        <!-- Button trigger modal -->
+      
+       <ul class="nav nav-tabs">
+
+  
+
+
+
+<!-- Singup Modal -->
+<div class="modal fade" id="singupModal" tabindex="-1" aria-labelledby="singupModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="singupModalTitle">Singup Here</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+                <form action="/signup" method="post">
+                  {% csrf_token %}
+                  <div class="form-group">
+                             <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" name="username" placeholder="username" required>
+                       </div>
+
+                        <div class="form-group">
+                             <label for="fname" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="fname" name="fname" placeholder="first name" required>
+                       </div>
+
+                        <div class="form-group">
+                             <label for="lname" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lname" name="lname" placeholder="last name" required>
+                       </div>
+
+                      <div class="form-group">
+                             <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="email" required>
+                       </div>
+
+                        <div class="form-group">
+                             <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" name="password" id="password" placeholder="enter your passwordd" required>
+                       </div>
+                        <div class="form-group">
+                             <label for="cpassword" class="form-label"> Confirm Password</label>
+                            <input type="cpassword" class="form-control" name="cpassword" id="cpassword" placeholder="Confirm passwordd" required>
+                       </div>
+                       <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+      </div>
+      <div class="modal-footer">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalTitle">Login Here</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+                <form action="/login" method="POST">
+                    {% csrf_token %}
+                  <div class="form-group">
+                             <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="loginusername" name="loginusername" placeholder="username">
+                       </div>
+
+                 <div class="form-group">
+                             <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginpassword" name="loginpassword" placeholder="enter your passwordd">
+                       </div>
+                      
+                       <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+      </div>
+      <div class="modal-footer">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
